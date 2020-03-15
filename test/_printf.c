@@ -8,17 +8,24 @@ int i = 0;
 va_list valist;
 
 va_start(valist, format);
-/**while (format[i])
+while (format[i])
 {
-	switch (format[i])
+	if (format[i] != '%' && format[i-1] != '%')
 	{
-		case 'c':
-		putchar((char)va_arg(valist, int));
-		putchar('\n');
-		case "s":
-		//while
-		putchar((char)va_arg(valist, int));
-		putchar('\n');
+		putchar(format[i]);
+	}
+	else
+	{
+		switch (format[i])
+		{
+			case 'c':
+				putchar((char)va_arg(valist, int));
+			case 's':
+				while(*format)
+				{
+					putchar((char)va_arg(valist, int));
+					format++;
+				}
 	/**case "i":
 	case "d":
 	case "u":
@@ -33,8 +40,9 @@ va_start(valist, format);
 	default:
 		break;
 	}
-	//i++;
-//}
+	}
+	i++;
+}
 	va_end(valist);
 	return (0);
 }
