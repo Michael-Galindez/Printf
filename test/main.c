@@ -13,7 +13,7 @@ int main(void)
 	unsigned int ui;
 	void *addr;*/
 	
-	_printf("Let's try to printf a simple sentence.\n");
+	_printf("123Let's try to printf a simple sentence.\n");
 	printf("Let's try to printf a simple sentence.\n");
 	/**len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
@@ -31,9 +31,9 @@ int main(void)
 	printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);*/
 	_printf("Character:[%c]\n", 'H');
 	printf("Character:[%c]\n", 'e');
-	/**_printf("String:[%s]\n", "I am a string !");
+	_printf("String:[%s]\n", "I am a string !");
 	printf("String:[%s]\n", "I am a string !");
-	_printf("Address:[%p]\n", addr);
+	/**_printf("Address:[%p]\n", addr);
 	printf("Address:[%p]\n", addr);
 	len = _printf("Percent:[%%]\n");
 	len2 = printf("Percent:[%%]\n");
