@@ -1,6 +1,8 @@
 #ifndef _HOLBERTON_H_
 #define _HOLBERTON_H_
 #include <stdarg.h>
+#include <unistd.h>
+
 /**
  * struct format_t - format specifier o el tipo marica
  * @type: format specificadorrrr
@@ -19,6 +21,6 @@ int print_number(va_list valist);
 int print_reverse(va_list valist);
 int _putchar(char c);
 int _strlen(char *s);
-void _puts(char *str);
-int (*get_spec_func(const char *s))(va_list valist);
+int (*get_function(const char *s))(va_list valist);
+
 #endif
