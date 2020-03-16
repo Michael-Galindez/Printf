@@ -83,3 +83,25 @@ int print_reverse(va_list valist)
 	}
 	return (len);
 }
+
+/**
+ * _puts - function that
+ * prints a string, followed by
+ * a new line, to stdout.
+ * @str: input is a parameter
+ * Return: void
+ */
+
+void _puts(char *str)
+{
+	int i;
+
+	i = 0;
+
+	while (str[i] != 0)
+	{
+		putchar(*(str + i));
+		i++;
+	}
+	putchar('\n');
+}
