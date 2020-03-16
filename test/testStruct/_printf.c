@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 				  format[i] == 'i' || format[i] == 'c' ||
 				 format[i] == 'r')
 			{
-				counter += get_function(format[i])(valist);
+				counter += get_function(&format[i])(valist);
 			}
 			else if (format[i] != '\0')
 			{
