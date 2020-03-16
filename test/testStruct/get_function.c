@@ -12,8 +12,12 @@ int (*get_function(const char *s))(va_list valist)
 	format_t formats[] = {
 		{"c", print_char},
 		{"s", print_string},
-		/**{"i", print_number},
-		{"d", print_number},*/
+		/**{"d", print_nums},
+		{"i", print_nums},
+		{"u", print_nums},
+		{"o", print_nums},
+		{"h", print_nums},
+		{"%", print_nums},*/
 		{"r", print_reverse},
 		{NULL, NULL}
 	};
