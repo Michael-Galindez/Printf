@@ -6,4 +6,5 @@
 #include <math.h>
 #include <stdlib.h>
 int _printf(const char *format, ...);
+int _strlen(char *s);
 #endif
