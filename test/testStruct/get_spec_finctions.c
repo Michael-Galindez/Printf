@@ -3,9 +3,9 @@
 #include "holberton.h"
 /**
  * get_spec_func - checks character to an array of structs.
- * If a successful match is found, the matching functioooonn is retueeeerned. espero que si entienda gonorrea jajaja
+ * If a successful match is found, the matching functioooonn is retueeeerned. y listo.
  * @s: The incoming character to be evalued by Michael.
- * Return: pointer to a function to format specifier 
+ * Return: pointer to a function to format specifier
  */
 int (*get_spec_func(const char *s))(va_list valist)
 {
