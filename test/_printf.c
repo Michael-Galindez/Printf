@@ -27,7 +27,7 @@ void _puts(char *str)
 
 int _printf(const char *format, ...)
 {
-int i;
+int i, s;
 char *ptr;
 
 va_list valist;
@@ -41,7 +41,7 @@ while (format[i])
 	}
 	else
 	{
-		switch (format[i])
+		switch (format[i + 1])
 		{
 			case 'c':
 				putchar((char)va_arg(valist, int));
