@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 	{
 	   if (format[i] == '%')
 		{
-			/* si encuentra el %%%% del mudluo*/
+			/** si encuentra el %%%% del mudluo*/
 			i++;
 			if (format[i] == '%')
 			{
@@ -39,9 +39,9 @@ int _printf(const char *format, ...)
 			{
 				_putchar('%');
 				_putchar(format[i]);
-			      
+				counter += 2;
 			}
-			else if (format[i] == '\0')
+			else if (format[i] == '\0' && (i -1) == 0)
 			{
 				return (-1);
 			}
