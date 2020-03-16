@@ -7,13 +7,11 @@
  * @s: The incoming character to be evalued by Michael.
  * Return: pointer to a function to format specifier
  */
-int (*get_spec_func(const char *s))(va_list valist)
+int (*get_function(const char *s))(va_list valist)
 {
 	format_t formats[] = {
 		{"c", print_char},
 		{"s", print_string},
-		{"d", print_number},
-		{"i", print_number},
 		{"r", print_reverse},
 		{NULL, NULL}
 	};

@@ -1,6 +1,5 @@
 #include <unistd.h>
 #include "holberton.h"
-
 /**
  * _strlen - find the length of a string so ew can use write lmao todo bien explicadito pa que no se pierda
  * @s: string to be parsed

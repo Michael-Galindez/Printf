@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include "holberton.h"
-
 /**
  * _printf - prints output according to the format specified.
  * @format: character string containing format specifiers
@@ -18,7 +17,7 @@ int _printf(const char *format, ...)
 
 	va_start(valist, format);
 
-	count = 0;
+	counter = 0;
 	for (i = 0; format[i] != '\0'; i++)
 	{
 	   if (format[i] == '%')
@@ -34,7 +33,7 @@ int _printf(const char *format, ...)
 				  format[i] == 'i' || format[i] == 'c' ||
 				 format[i] == 'r')
 			{
-				counter += get_function(&format[i])(valist);
+				counter += get_function(format[i])(valist);
 			}
 			else if (format[i] != '\0')
 			{
