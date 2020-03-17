@@ -1,0 +1,73 @@
+.TH _PRINTF 3
+.SH NAME
+_printf - Format and print data, similar to print C function.
+.SH SYNOPSIS
+\fB#include "holberton.h"\fR
+
+\fBint _printf(const char *\fR\fIformat\fR\fB, ...);\fR
+
+.SH DESCRIPTION
+\fB_printf()\fR writes to the standard output according to a format specifier.
+
+.B Return Value
+.RS 3
+The return value of a successful call to _printf is the number of characters printed,
+On failure, it returns -1,
+
+.RE
+
+.B The Conversion Specifier
+.RS 3
+The following characters are what \fB_printf()\fR is able to print.
+
+.B i, d
+.RS 6
+The \fIint\fR argument is signed decimal notation.
+.RE
+
+.B c
+.RS 6
+The \fIint\fR argument is converted to char, and the resulting character is printed by the function.
+.RE
+
+.B s
+.RS 6
+The \fIconst char *\fR argument is expected to be a pointer to an array of character type (pointer to a string).  Characters from the array are written.
+.RE
+
+.B r
+.RS 6
+The \fIconst char *\fR argument is expected to be a pointer to an array of character type. Characters from the array are written in reverse
+.RE
+
+.SH EXAMPLE
+.RS 3
+Print a sentence using conversion specifiers:
+.RE
+
+.RS 8
+#include "holberton.h"
+.br
+int main (void)
+.br
+{
+.br
+.RS 8
+_printf("%s" "implicit declaration of main function");
+.br
+return (0);
+.RE
+.br
+}
+.RE
+
+.RS 3
+Output : "implicit declaration of main function"
+.RE
+
+.SH SEE ALSO
+.B printf(3)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Julian Franco & Michael Galindez
