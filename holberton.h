@@ -6,7 +6,7 @@
 /**
  * struct format_t - format specifier o el tipo marica
  * @type: format specificadorrrr
- * @func: output function to be used
+ * @func: output function to be used 
  */
 typedef struct format_t
 {

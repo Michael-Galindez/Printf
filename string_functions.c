@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include "holberton.h"
 /**
- * _strlen - find the length of a string so ew can use write lmao todo bien explicadito pa que no se pierda
+ * _strlen - find the length of a string so ew can use write lmao.
  * @s: string to be parsed
  * Return: numero of characters in string
  */

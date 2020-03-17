@@ -3,7 +3,7 @@
 #include "holberton.h"
 /**
  * get_function - checks character to an array of structs.
- * if a successful match is found, the matching function
+ * If a successful match is found, the matching function.XCy
  * @s: The incoming character to be evalued by Michael.
  * Return: pointer to a function to format specifier
  */
