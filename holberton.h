@@ -4,7 +4,7 @@
 #include <unistd.h>
 
 /**
- * struct format_t - format specifier o el tipo marica
+ * struct format_t - format specifier
  * @type: format specificador
  * @func: output function to be used
  */
@@ -24,5 +24,6 @@ int _strlen(char *s);
 int (*get_function(const char *s))(va_list valist);
 int print_number(va_list valist);
 int print_uint(va_list valist);
+int print_binary(va_list valist);
 
 #endif

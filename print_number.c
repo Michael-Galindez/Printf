@@ -2,7 +2,7 @@
 /**
  * print_number - function to print an integer
  * @valist: input is an intiger
- * Return: void
+ * Return: int
  */
 int print_number(va_list valist)
 {
@@ -44,7 +44,7 @@ int print_number(va_list valist)
 /**
  * print_uint - funct print unsigned int
  * @valist: input is an unsigned int
- * Return: void
+ * Return: int
  */
 int print_uint(va_list valist)
 {
@@ -74,4 +74,35 @@ int print_uint(va_list valist)
 	_putchar(m % 10 + '0');
 	digits++;
 	return (digits);
+}
+/**
+ * print_binary - function that prints int in binary
+ * @valist: input is an unsigned int
+ * Return: int
+ */
+int print_binary(va_list valist)
+{
+	int i = 0, j;
+	char buffer [10000] = {'\0'};
+	unsigned int k;
+
+	k = va_arg(valist, unsigned int);
+	if (k == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+	while (k > 0)
+	{
+		buffer[i] = k % 2;
+		k /= 2;
+		i++;
+	}
+	j = i - 1;
+	while (j >= 0)
+	{
+		_putchar(buffer[j] + '0');
+		j--;
+	}
+	return (i);
 }

@@ -16,6 +16,7 @@ int (*get_function(const char *s))(va_list valist)
 		{"d", print_number},
 		{"i", print_number},
 		{"u", print_uint},
+		{"b", print_binary},
 		{NULL, NULL}
 	};
 
