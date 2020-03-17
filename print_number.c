@@ -48,8 +48,7 @@ int print_number(va_list valist)
  */
 int print_uint(va_list valist)
 {
-	unsigned int n, m;
-	int i, k, digits = 0;
+	unsigned int n, m, i, k, digits = 0;
 
 	n = va_arg(valist, unsigned int);
 	m = n;

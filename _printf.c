@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i] == 's' || format[i] == 'd' ||
 				  format[i] == 'i' || format[i] == 'c' ||
-				 format[i] == 'r')
+				 format[i] == 'r' || format[i] == 'u')
 			{
 				counter += get_function(&format[i])(valist);
 			}
