@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * print_number - function to print an integer
- * @n: input is an intiger
+ * @valist: input is an intiger
  * Return: void
  */
 int print_number(va_list valist)
@@ -42,8 +42,8 @@ int print_number(va_list valist)
 }
 
 /**
- * print_unsignedint - funct print unsigned int
- * @valist: input is an intiger
+ * print_uint - funct print unsigned int
+ * @valist: input is an unsigned int
  * Return: void
  */
 int print_uint(va_list valist)
