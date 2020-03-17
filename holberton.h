@@ -22,5 +22,7 @@ int print_reverse(va_list valist);
 int _putchar(char c);
 int _strlen(char *s);
 int (*get_function(const char *s))(va_list valist);
+int print_number(va_list valist);
+int print_uint(va_list valist);
 
 #endif

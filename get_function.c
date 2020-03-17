@@ -13,6 +13,9 @@ int (*get_function(const char *s))(va_list valist)
 		{"c", print_char},
 		{"s", print_string},
 		{"r", print_reverse},
+		{"d", print_number},
+		{"i", print_number},
+		{"u", print_uint},
 		{NULL, NULL}
 	};
 
