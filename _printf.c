@@ -1,6 +1,3 @@
-#include <stdarg.h>
-#include <stdlib.h>
-#include <unistd.h>
 #include "holberton.h"
 /**
  * _printf - prints output according to the format specified.
@@ -14,15 +11,12 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-
 	va_start(valist, format);
-
 	counter = 0;
 	for (i = 0; format[i] != '\0'; i++)
 	{
-	   if (format[i] == '%')
+		if (format[i] == '%')
 		{
-			/** si encuentra el %%%% del mudluo*/
 			i++;
 			if (format[i] == '%')
 			{
@@ -30,7 +24,7 @@ int _printf(const char *format, ...)
 				counter++;
 			}
 			else if (format[i] == 's' || format[i] == 'd' ||
-				  format[i] == 'i' || format[i] == 'c' ||
+				 format[i] == 'i' || format[i] == 'c' ||
 				 format[i] == 'r')
 			{
 				counter += get_function(&format[i])(valist);
@@ -41,7 +35,7 @@ int _printf(const char *format, ...)
 				_putchar(format[i]);
 				counter += 2;
 			}
-			else if (format[i] == '\0' && (i -1) == 0)
+			else if (format[i] == '\0' && (i - 1) == 0)
 			{
 				return (-1);
 			}
@@ -52,10 +46,9 @@ int _printf(const char *format, ...)
 			}
 		}
 		else
-		{
 			_putchar(format[i]);
 			counter++;
-		}
+
 	}
 	va_end(valist);
 	return (counter);

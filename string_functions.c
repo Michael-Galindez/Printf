@@ -26,7 +26,7 @@ int _putchar(char c)
 }
 
 /**
- * print_char - print a character 
+ * print_char - print a character
  * @valist: va_list containing variadic arguments
  * Return: num of characters printed
  */
@@ -62,7 +62,7 @@ int print_string(va_list valist)
 
 /**
  * print_reverse - print a string in reverse
- * @valist: va_list 
+ * @valist: va_list
  * Return: num of characters printed
  */
 int print_reverse(va_list valist)
