@@ -1,6 +1,10 @@
 #include <unistd.h>
 #include "holberton.h"
-
+/**
+ * print_hs - Aux function to print S
+ * @s: unsigned
+ * Return: num of characters printed
+ */
 int print_hs(unsigned int s)
 {
 	char buffer[15];
