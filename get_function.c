@@ -20,6 +20,7 @@ int (*get_function(const char *s))(va_list valist)
 		{"x", print_hex},
 		{"X", print_hexcapital},
 		{"S", print_stringcapt},
+		{"o", print_o},
 		{NULL, NULL}
 	};
 

@@ -7,26 +7,27 @@
 
 int print_o(va_list valist)
 {
-	unsigned int a[11];
-	unsigned int i, m, n, sum;
-	int count;
+	int i = 0, j;
+	char buffer [10000] = {'\0'};
+	unsigned int k;
 
-	n = va_arg(valist, unsigned int);
-	m = 1073741824;
-	a[0] = n / m;
-	for (i = 0; i < 11; i++)
+	k = va_arg(valist, unsigned int);
+	if (k == 0)
 	{
-		m = 8;
-		a[i] = (n / m) % 8;
+		_putchar('0');
+		return (1);
 	}
-	for (i = 0, sum = 0, count = 0; i < 11; i++)
+	while (k > 0)
 	{
-		sum += a[i];
-		if (sum || i == 10)
-		{
-			_putchar('0' + a[i]);
-			count++;
-		}
+		buffer[i] = k % 8;
+		k /= 8;
+		i++;
 	}
-	return (count);
+	j = i - 1;
+	while (j >= 0)
+	{
+		_putchar(buffer[j] + '0');
+		j--;
+	}
+	return (i);
 }

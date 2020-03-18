@@ -21,6 +21,7 @@ int print_number(va_list valist);
 int print_reverse(va_list valist);
 int _putchar(char c);
 int _strlen(char *s);
+int conditional_char(char c);
 int (*get_function(const char *s))(va_list valist);
 int print_number(va_list valist);
 int print_uint(va_list valist);
@@ -28,5 +29,6 @@ int print_binary(va_list valist);
 int print_hex(va_list valist);
 int print_hexcapital(va_list valist);
 int print_stringcapt(va_list valist);
+int print_o(va_list valist);
 
 #endif

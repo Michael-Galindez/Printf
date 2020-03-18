@@ -23,11 +23,10 @@ int _printf(const char *format, ...)
 				_putchar('%');
 				counter++;
 			}
-			else if (format[i] == 's' || format[i] == 'd' || format[i] == 'i' ||
-			format[i] == 'c' || format[i] == 'r' || format[i] == 'u' || format[i]
-			== 'b' || format[i] == 'x' || format[i] == 'X' || format[i] == 'S')
+			else if (conditional_char(format[i]))
+			{
 				counter += get_function(&format[i])(valist);
-
+			}
 			else if (format[i] != '\0')
 			{
 				_putchar('%');
