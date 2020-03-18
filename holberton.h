@@ -27,5 +27,6 @@ int print_uint(va_list valist);
 int print_binary(va_list valist);
 int print_hex(va_list valist);
 int print_hexcapital(va_list valist);
+int print_o(va_list valist);
 
 #endif
