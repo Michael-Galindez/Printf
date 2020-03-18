@@ -25,5 +25,7 @@ int (*get_function(const char *s))(va_list valist);
 int print_number(va_list valist);
 int print_uint(va_list valist);
 int print_binary(va_list valist);
+int print_hex(va_list valist);
+int print_hexcapital(va_list valist);
 
 #endif

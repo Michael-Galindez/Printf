@@ -106,3 +106,70 @@ int print_binary(va_list valist)
 	}
 	return (i);
 }
+
+/**
+ * print_hex - function that prints hexadecimal
+ * @valist: input is an unsigned int
+ * Return: int
+ */
+int print_hex(va_list valist)
+{
+	char buffer[15];
+	unsigned int digits = 0, m, i = 0, reminder = 0;
+
+	m = va_arg(valist, unsigned int);
+	while (m != 0)
+	{
+		reminder = m % 16;
+		if (reminder > 9)
+		{
+			buffer[i] =  (char)(reminder + 87);
+		}
+		else
+		{
+			buffer[i] = (char)(reminder + 48);
+		}
+		m = m / 16;
+		i++;
+	}
+	while (i--)
+	{
+		_putchar(buffer[i]);
+		digits++;
+	}
+	return (digits);
+}
+
+/**
+ * print_hexcapital - function that prints hexadecimal
+ * in capital letters
+ * @valist: input is an unsigned int
+ * Return: int
+ */
+int print_hexcapital(va_list valist)
+{
+	char buffer[15];
+	unsigned int digits = 0, m, i = 0, reminder = 0;
+
+	m = va_arg(valist, unsigned int);
+	while (m != 0)
+	{
+		reminder = m % 16;
+		if (reminder > 9)
+		{
+			buffer[i] =  (char)(reminder + 55);
+		}
+		else
+		{
+			buffer[i] = (char)(reminder + 48);
+		}
+		m = m / 16;
+		i++;
+	}
+	while (i--)
+	{
+		_putchar(buffer[i]);
+		digits++;
+	}
+	return (digits);
+}

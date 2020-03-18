@@ -17,6 +17,8 @@ int (*get_function(const char *s))(va_list valist)
 		{"i", print_number},
 		{"u", print_uint},
 		{"b", print_binary},
+		{"x", print_hex},
+		{"X", print_hexcapital},
 		{NULL, NULL}
 	};
 
