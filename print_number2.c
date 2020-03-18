@@ -14,12 +14,10 @@ int print_o(va_list valist)
 	n = va_arg(valist, unsigned int);
 	m = 1073741824;
 	a[0] = n / m;
-	i = 0;
-	while (i < 11)
+	for (i = 0; i < 11; i++)
 	{
-		m /= 8;
+		m = 8;
 		a[i] = (n / m) % 8;
-		i++;
 	}
 	for (i = 0, sum = 0, count = 0; i < 11; i++)
 	{
