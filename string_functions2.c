@@ -37,31 +37,27 @@ int print_hs(unsigned int s)
  */
 int print_stringcapt(va_list valist)
 {
-	int i, digits = 0;
-	char *s;
+	unsigned int i;
+	int count = 0;
+	char *str = va_arg(valist, char *);
 
-	s = va_arg(valist, char *);
-
-	if (s == NULL)
-		s = "(null)";
-	for (i = 0; s[i] != '\0'; i++)
+	if (str == NULL)
+		str = "(null)";
+	for (i = 0; str[i]; i++)
 	{
-		if ((s[i] > 0 && s[i] < 32) || s[i] >= 127)
+		if (str[i] < 32 || str[i] >= 127)
 		{
-			_putchar(92);
+			_putchar('\\');
 			_putchar('x');
-
-			digits = digits + 2;
-			digits = digits + print_hs(s[i]);
-			i++;
-			_putchar(s[i]);
-			digits++;
+_putchar('0')
+			count += 2;
+			count += print_hs(str[i]);
 		}
 		else
 		{
-		_putchar(s[i]);
-		digits++;
+			_putchar(str[i]);
+			count++;
 		}
 	}
-	return (digits);
+	return (count);
 }

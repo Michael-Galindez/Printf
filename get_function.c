@@ -19,7 +19,6 @@ int (*get_function(const char *s))(va_list valist)
 		{"b", print_binary},
 		{"x", print_hex},
 		{"X", print_hexcapital},
-		{"o", print_o},
 		{"S", print_stringcapt},
 		{NULL, NULL}
 	};
