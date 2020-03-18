@@ -49,7 +49,7 @@ int print_stringcapt(va_list valist)
 		{
 			_putchar('\\');
 			_putchar('x');
-_putchar('0')
+			_putchar('0');
 			count += 2;
 			count += print_hs(str[i]);
 		}
