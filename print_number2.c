@@ -32,37 +32,37 @@ int print_o(va_list valist)
 	return (i);
 }
 /**
- * 
- *
- *
+ * print_R - prints the rot13'ed string
+ * @valist: imput as unsigned int.
+ * Return: octal number to be printed
  */
 int print_R(va_list valist)
 {
-  char *str;
-  unsigned int i, j;
-  int count = 0;
-  char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-  char out[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char *str;
+	unsigned int i, j;
+	int count = 0;
+	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char out[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-  str = va_arg(valist, char *);
-  if (str == NULL)
-    str = "(ahyy)";
-  for (i = 0; str[i]; i++)
-    {
-      for (j = 0; in[j]; j++)
+	str = va_arg(valist, char *);
+	if (str == NULL)
+	str = "(ahyy)";
+	for (i = 0; str[i]; i++)
 	{
-	  if (in[j] == str[i])
-	    {
-	      _putchar(out[j]);
-	      count++;
-	      break;
-	    }
-	}
-      if (!in[j])
+		for (j = 0; in[j]; j++)
 	{
-	  _putchar(str[i]);
-	  count++;
+		if (in[j] == str[i])
+		{
+			_putchar(out[j]);
+			count++;
+			break;
+		}
 	}
-    }
-  return (count);
+		if (!in[j])
+	{
+		_putchar(str[i]);
+		count++;
+	}
+	}
+	return (count);
 }
