@@ -11,7 +11,7 @@ int conditional_char(char c)
 	if (c == 's' || c == 'd' || c == 'i'
 	|| c == 'c' || c == 'r' || c == 'u'
 	|| c == 'b' || c == 'x' || c == 'X'
-	|| c == 'S' || c == 'o')
+	|| c == 'S' || c == 'o' || c == 'R')
 	{
 		i = 1;
 	}
